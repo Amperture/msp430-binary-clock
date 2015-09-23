@@ -55,9 +55,8 @@ uint8_t spiReceiveChar(){
     return UCB0RXBUF; 
 }
 
-static void
-__attribute__((__interrupt__(USCIAB0TX_VECTOR)))
-USCI0TX_ISR(void){ // TX Interrupt Handler
+#pragma vector USCIAB0TX_VECTOR
+interrupt void USCI0TX_ISR(void){ // TX Interrupt Handler
     // Place mailbox byte into buffer.
     UCB0TXBUF = txChar;
 

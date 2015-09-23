@@ -100,9 +100,8 @@ int main(void){
 }
         
 // Timer Interrupt
-static void
-__attribute__((__interrupt__(TIMER0_A0_VECTOR)))
-Timer_A(void){ // TX Interrupt Handler
+#pragma vector TIMER0_A0_VECTOR
+interrupt void Timer_A(void){ // TX Interrupt Handler
     timerCount++;
     /**/
     if (timerCount >= 25){
@@ -130,9 +129,8 @@ Timer_A(void){ // TX Interrupt Handler
 }
 
 // Button Interrupts
-static void
-__attribute__((__interrupt__(PORT1_VECTOR)))
-P1ISR(void){ // TX Interrupt Handler
+#pragma vector PORT1_VECTOR
+interrupt void P1ISR(void){ // TX Interrupt Handler
 
     // Lower the Interrupt flag
     P1IFG = 0;
