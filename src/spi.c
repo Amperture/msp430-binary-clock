@@ -10,7 +10,7 @@
  *       Revision:  none
  *       Compiler:  msp430-elf-gcc
  *
- *         Author:  W. Alex Best (mn), alexbest@alexbest.me
+ *         Author:  W. Alex Best (mn), theamp@gmail.com
  *        Company:  Amperture Engineering
  *
  * ==========================================================================
